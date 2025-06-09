@@ -14,7 +14,7 @@ export default function rootReducer(state = initialState, action) {
 			return { ...state, query: action.payload }
 		case 'SET_RESULT':
 			return { ...state, result: action.payload }
-		case 'SET_TABLE':
+		case 'SET_TABLES':
 			return { ...state, tablesWithData: action.payload }
 		default:
 			return state

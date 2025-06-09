@@ -10,11 +10,11 @@ export default function App() {
 	const result = useSelector(state => state.result)
 	const tablesWithData = useSelector(state => state.tablesWithData)
 
+	console.log('tablesWithData:', tablesWithData)
 	// Хук, который выполнится один раз после монтирования компонента
 	useEffect(() => {
 		dispatch(initDatabase())
 	}, [dispatch])
-
 	// Функция выполнения SQL-запроса по кнопке
 	const execute = () => {
 		try {
@@ -62,7 +62,7 @@ export default function App() {
 				rows={6}
 				style={{ width: '100%', fontFamily: 'monospace' }}
 				value={query}
-				onChange={e => setQuery(e.target.value)} // Обновление состояния при изменении текста
+				onChange={e => dispatch(setQuery(e.target.value))} // Обновление состояния при изменении текста
 			/>
 			<div style={{ marginTop: 10 }}>
 				<button onClick={execute}>Execute</button>{' '}

@@ -1,6 +1,6 @@
 import { useEffect } from 'react' // Импортируем хуки React
 import { useDispatch, useSelector } from 'react-redux'
-import { initDatabase, setResult, setQuery } from '../redux/actions'
+import { initDatabase, setResult, setQuery } from './redux/actions'
 
 export default function App() {
 	const dispatch = useDispatch()
@@ -10,7 +10,6 @@ export default function App() {
 	const result = useSelector(state => state.result)
 	const tablesWithData = useSelector(state => state.tablesWithData)
 
-	console.log('tablesWithData:', tablesWithData)
 	// Хук, который выполнится один раз после монтирования компонента
 	useEffect(() => {
 		dispatch(initDatabase())

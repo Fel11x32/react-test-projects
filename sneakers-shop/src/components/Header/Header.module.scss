@@ -1,0 +1,43 @@
+.header {
+	background-color: #3b3c3d;
+	padding-block: 43px;
+	color: #fff;
+
+	.container {
+		max-width: 1420px;
+		margin: 0 auto;
+		padding: 0 40px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 20px;
+		font-weight: 900;
+		line-height: 24px;
+	}
+
+	.nav {
+		display: flex;
+		gap: 64px;
+
+		.link {
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 18px;
+			text-decoration: none;
+			color: #ffffff80;
+			transition: color 0.3s;
+
+			&:hover {
+				color: #ffffffcc;
+			}
+		}
+
+		.active {
+			color: #ffffff;
+		}
+	}
+}

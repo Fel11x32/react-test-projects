@@ -1,0 +1,29 @@
+// src/components/ProductItem.scss
+.product-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.product-card {
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	h3 {
+		margin: 0 0 0.5rem 0;
+		color: #333;
+	}
+
+	p {
+		margin: 0;
+		color: #777;
+		font-size: 0.9rem;
+	}
+}

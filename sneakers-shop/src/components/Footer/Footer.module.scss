@@ -1,0 +1,96 @@
+.footer {
+	background-color: #3b3c3d;
+	color: #aaa;
+	padding: 73px 0;
+	font-size: 14px;
+
+	.container {
+		max-width: 1420px;
+		margin: 0 auto;
+		padding: 0 40px;
+
+		display: flex;
+		justify-content: space-between;
+	}
+	.left {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		h4 {
+			color: #fff;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 81%;
+		}
+
+		.content {
+			margin-top: 40px;
+			display: flex;
+			flex-direction: column;
+
+			a {
+				display: inline-block;
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 81%;
+				text-decoration: none;
+
+				&:not(:first-child) {
+					margin-top: 13px;
+				}
+				&:last-child {
+					margin-top: 90px;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.socials {
+			display: flex;
+			gap: 26px;
+			justify-content: flex-end;
+
+			img {
+				width: 26px;
+				height: 26px;
+				cursor: pointer;
+				opacity: 0.7;
+				transition: opacity 0.3s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.subscribe {
+			input {
+				background: none;
+				border: none;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+				padding: 14px 2px;
+				outline: none;
+
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 81%;
+
+				&:focus {
+					border-color: rgba(255, 255, 255, 0.7);
+				}
+			}
+		}
+	}
+}

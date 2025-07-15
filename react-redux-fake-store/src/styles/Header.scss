@@ -1,0 +1,33 @@
+// src/components/Header.scss
+.header {
+	background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+	padding: 1rem 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		color: #fff;
+		margin: 0;
+		font-size: 1.8rem;
+		font-weight: 600;
+		transition: transform 0.2s ease;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

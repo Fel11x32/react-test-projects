@@ -39,6 +39,12 @@
 .black {
 	background-color: #86a666;
 }
+.black.selected {
+	background-color: #4d7e42;
+}
 .white {
 	background-color: #ffffdd;
+}
+.white.selected {
+	background-color: #89aa7d;
 }

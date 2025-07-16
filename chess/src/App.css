@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 #root {
@@ -47,4 +48,15 @@
 }
 .white.selected {
 	background-color: #89aa7d;
+}
+
+.available {
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background-color: rgba(5, 104, 5, 0.597);
+}
+
+.highlight {
+	border: 3px dashed #323232;
 }

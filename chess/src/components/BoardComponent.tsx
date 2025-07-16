@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import type { FC } from 'react'
 import type { Board } from '../models/Board'
 import CellComponent from './CellComponent'
@@ -12,8 +12,24 @@ interface BoardProps {
 const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
 	const [selectedCell, setSelectedCell] = useState<Cell | null>(null)
 
+	useEffect(() => {
+		board.highlightCells(selectedCell) // Изменяем поле available у ячейки
+
+		const newBoard = board.getCopyBoard() // Создаём новую доску с новыми ячейками
+		setBoard(newBoard)
+	}, [selectedCell, board, setBoard])
+
 	const click = (cell: Cell) => {
-		if (cell.figure) {
+		if (selectedCell === cell) {
+			setSelectedCell(null)
+		} else if (
+			selectedCell &&
+			selectedCell !== cell &&
+			selectedCell.figure?.canMove(cell)
+		) {
+			selectedCell.moveFigure(cell)
+			setSelectedCell(null)
+		} else {
 			setSelectedCell(cell)
 		}
 	}

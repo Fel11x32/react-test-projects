@@ -17,23 +17,25 @@
 }
 
 .board {
-	width: calc(64px * 8);
-	height: calc(64px * 8);
+	width: calc(70px * 8);
+	height: calc(70px * 8);
 	display: flex;
 	flex-wrap: wrap;
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .cell {
-	width: 64px;
-	height: 64px;
+	width: 70px;
+	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .cell img {
-	width: 58px;
-	height: 58px;
+	width: 64px;
+	height: 64px;
 	position: relative;
 }
 
@@ -51,12 +53,12 @@
 }
 
 .available {
-	height: 14px;
-	width: 14px;
+	height: 18px;
+	width: 18px;
 	border-radius: 50%;
-	background-color: rgba(5, 104, 5, 0.597);
+	background-color: rgba(5, 104, 5, 0.458);
 }
 
 .highlight {
-	border: 3px dashed #323232;
+	border: 4px dashed #323232;
 }

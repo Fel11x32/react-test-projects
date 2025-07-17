@@ -24,7 +24,6 @@ const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
 			setSelectedCell(null)
 		} else if (
 			selectedCell &&
-			selectedCell !== cell &&
 			selectedCell.figure?.canMove(cell)
 		) {
 			selectedCell.moveFigure(cell)
